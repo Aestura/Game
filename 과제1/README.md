@@ -34,6 +34,7 @@ int main(void)
 }
 ```
 //인트로 화면
+-----------------------------
 ```
 void intro()
 {
@@ -51,6 +52,7 @@ void intro()
 ```
 
 // 커서위치 제어  
+-----------------------------
 ```
 void gotoxy(int x, int y)
 {
@@ -60,6 +62,7 @@ void gotoxy(int x, int y)
 ```
 
 //키보드 방향키로 이동  
+-----------------------------
 ```
 void move_arrow_key(char key, int* x1, int* y1, int x_b, int y_b)
 {
@@ -88,6 +91,7 @@ void move_arrow_key(char key, int* x1, int* y1, int x_b, int y_b)
 ```
 
 //바둑판 그리기  
+-----------------------------
 ```
 void draw_check01(int c, int r)
 {
@@ -148,6 +152,7 @@ void draw_check01(int c, int r)
 */
 
 //번갈아가면서 바둑 놓는 함수
+-----------------------------
 ```
 void game_control(void) {
     int x = 1, y = 1, other = 0;
@@ -199,6 +204,7 @@ void game_control(void) {
 ```
  
 //흑돌 백돌 구분하여 출력 
+-----------------------------
 ```
 void display_stone(int matrix[][20][20])
 {
@@ -219,7 +225,8 @@ void display_stone(int matrix[][20][20])
 ```
  
 
-//오목의 승패 갈림 판별 함수  
+//오목의 승패 갈림 판별 함수 
+-----------------------------
 ```
 int game_end(int matrix[][20][20])
 {
