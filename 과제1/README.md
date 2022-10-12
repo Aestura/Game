@@ -1,12 +1,13 @@
 오목 프로그램
 =================================================================================
 
-
+```
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
 #include <Windows.h>
-
+```
+```
 void intro(); // 추가  
 void move_arrow_key(char chr, int *x, int *y, int x_b, int y_b);
 void gotoxy(int x, int y);
@@ -14,12 +15,14 @@ void draw_check01(int c, int r);
 void game_control(void);
 void display_stone(int matrix[][20][20]); // 추가  
 int game_end(int matrix[][20][20]); // 추가  
-
+```
+```
 void textcolor(int color_number)// 콘솔창 색상 조절  
 {
  SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),color_number);
 }
-
+```
+```
 int main(void)
 {
 	system("mode con cols=40 lines=30"); //cols =가로lines =세로
@@ -29,11 +32,13 @@ int main(void)
     game_control();
     return 0;
 }
-
+```
+//인트로 화면
+```
 void intro()
 {
 	
-	printf("┌──────────┐");
+    printf("┌──────────┐");
     printf("\n");
     printf("│ 오목 게임│");
     printf("\n");
@@ -43,15 +48,19 @@ void intro()
     textcolor(20); //파랑배경 빨강 글자  
     getch();
 }
+```
 
 // 커서위치 제어  
+```
 void gotoxy(int x, int y)
 {
     COORD Pos = { x - 1, y - 1 };
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Pos);
 }
+```
 
 //키보드 방향키로 이동  
+```
 void move_arrow_key(char key, int* x1, int* y1, int x_b, int y_b)
 {
     switch (key)
@@ -76,9 +85,10 @@ void move_arrow_key(char key, int* x1, int* y1, int x_b, int y_b)
         return;
     }
 }
-
+```
 
 //바둑판 그리기  
+```
 void draw_check01(int c, int r)
 {
     int i, j;
@@ -112,7 +122,7 @@ void draw_check01(int c, int r)
     printf("%c%c", a, b[5]); // └ 좌하단 모서리  
     printf("\n");
 }
-
+```
 /*
 ─   -  0xa1(161) 1
 
@@ -138,6 +148,7 @@ void draw_check01(int c, int r)
 */
 
 //번갈아가면서 바둑 놓는 함수
+```
 void game_control(void) {
     int x = 1, y = 1, other = 0;
     int matrix[2][20][20] = { 0 };
@@ -185,9 +196,10 @@ void game_control(void) {
         }
     } while (1);
 }
-
+```
  
 //흑돌 백돌 구분하여 출력 
+```
 void display_stone(int matrix[][20][20])
 {
     int i, x, y;
@@ -204,11 +216,11 @@ void display_stone(int matrix[][20][20])
                 }
             }
 }
-
+```
  
 
 //오목의 승패 갈림 판별 함수  
-
+```
 int game_end(int matrix[][20][20])
 {
         int count = 0;
@@ -315,3 +327,4 @@ int game_end(int matrix[][20][20])
         return 0; //게임이 안 끝났으면 0 반환
 
 }
+```
