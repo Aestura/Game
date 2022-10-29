@@ -67,7 +67,7 @@
 ```
 
 ># 사이트
-netlify : 
+* netlify : 
 <https://css-framework-gameprogramming.netlify.app>
-github.io : 
+* github.io : 
 <https://aestura.github.io/>
