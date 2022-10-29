@@ -9,7 +9,6 @@
 
 ```html
 <div class="p-3 mb-2 bg-primary text-white">
-
         <!-- 벌마 -->
         <section class="hero">
             <div class="hero-body">
